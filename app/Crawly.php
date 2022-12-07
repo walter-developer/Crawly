@@ -89,7 +89,6 @@ class Crawly
                 ));
             })
             ->success(function ($response) {
-                die($response->body);
                 //Fluxo 2
                 $inputsValues = $this->html
                     ->setHtml($response->body)
@@ -115,6 +114,7 @@ class Crawly
                         $resposta = $this->html
                             ->setHtml($response->body)
                             ->text('span');
+                        print_r('<div align="center" style="margin:50px !important">REQUSIÇÃO : <b>' .  static::ENDPOINT_URL . '</b></div>' . PHP_EOL);
                         print_r('<div align="center" style="margin:50px !important">A RESPOSTA É : <b>' .  $resposta . '</b></div>' . PHP_EOL);
                     });
             });

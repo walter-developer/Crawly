@@ -12,11 +12,11 @@ PASSOA PASSO PARA EXECUTAR A APLICAÇÃO:
 2.1 Para Linux - Editar o aquivo ( /etc/hosts ) e adicinonar [ 127.0.0.1 teste-crawly.com.br ] no aquivo de hosts
 2.2 Para Windows - Editar o aquivo ( C:\Windows\System32\drivers\etc\hosts ) e adicinonar [ 127.0.0.1 teste-crawly.com.br ] no aquivo de hosts
 
-3° - Clonar o repositório do teste ( https://github.com/walter-developer/Crawly.git ) para uma pasta local (Exe.. C://Projeto/Crawly/ )
+3° - Clonar o repositório do teste ( https://github.com/walter-developer/Crawly.git ) para uma pasta local (Exe.. C:/Projeto/Crawly/ )
 
-4° - Via terminal, acessar o diretório que foi clonado o projeto ( Exe.. cd C://Projeto/Crawly/ )
+4° - Via terminal, acessar o diretório que foi clonado o projeto ( Exe.. cd C:/Projeto/Crawly/ )
 
-5° - Iniciar o servidor web executando docker-compose up -d (Exe.. docker-compose up -d ) no terminal.
+5° - Iniciar o servidor web executando ( docker-compose up -d ) no terminal.
 
 6° - Abra um navegador e acesse teste-crawly.com.br, a página exibirá o resultado como solicitado via email.
 
