@@ -18,7 +18,21 @@ PASSOA PASSO PARA EXECUTAR A APLICAÇÃO:
 
 5° - Iniciar o servidor web executando ( docker-compose up -d ) no terminal.
 
-6° - Abra um navegador e acesse teste-crawly.com.br, a página exibirá o resultado como solicitado via email.
+6° - Aguarde de 5 a 10 segundos para que o composer complete a instalação do autoload e phpunit.
+
+7° - Abra um navegador e acesse teste-crawly.com.br, a página exibirá o resultado como solicitado via email.
+
+#############################################################################################################################
+
+PASSOA PASSO PARA EXECUTAR OS TESTES:
+
+1° - Via terminal, acessar o diretório que foi clonado o projeto ( Exe.. cd C:/Projeto/Crawly/ ).
+
+2° - No termina digitar: docker container exec -it php-8 /bin/sh, para acessar o container do php
+
+3° - No terminal do container, acessar o diretório da aplicação: cd /app/crawly/
+
+4° - No terminal do container, acessar o diretório da aplicação, executar o comando php vendor/bin/phpunit.
 
 #############################################################################################################################
 

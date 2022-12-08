@@ -430,7 +430,7 @@ class Http
         } catch (Throwable $e) {
             $this->callbackCode = 404;
             $this->setErrorMessage($e->getMessage());
-            return null;
+            return $this->response = null;
         }
         return null;
     }
