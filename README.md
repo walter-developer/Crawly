@@ -16,11 +16,13 @@ PASSOA PASSO PARA EXECUTAR A APLICAÇÃO:
 
 4° - Via terminal, acessar o diretório que foi clonado o projeto ( Exe.. cd C:/Projeto/Crawly/ )
 
-5° - Iniciar o servidor web executando ( docker-compose up -d ) no terminal.
+5° - Iniciar o servidor web executando: " docker-compose up -d ", no terminal.
 
 6° - Aguarde de 5 a 10 segundos para que o composer complete a instalação do autoload e phpunit.
 
 7° - Abra um navegador e acesse teste-crawly.com.br, a página exibirá o resultado como solicitado via email.
+
+OBSERVAÇÃO: acima segue os passo de um exemplo para configuração de um host local, porém acessando localhost, também obtem o mesmo resultado.
 
 #############################################################################################################################
 
@@ -30,9 +32,9 @@ PASSOA PASSO PARA EXECUTAR OS TESTES:
 
 2° - No termina digitar: docker container exec -it php-8 /bin/sh, para acessar o container do php
 
-3° - No terminal do container, acessar o diretório da aplicação: cd /app/crawly/
+3° - No terminal do container, acessar o diretório da aplicação: " cd /app/crawly/ "
 
-4° - No terminal do container, acessar o diretório da aplicação, executar o comando php vendor/bin/phpunit.
+4° - No terminal do container, após acessar o diretório da aplicação, executar o comando: " php vendor/bin/phpunit ".
 
 #############################################################################################################################
 
@@ -52,7 +54,7 @@ Http.php => Classe responsável por fazer as requsições http ultilizando CURL 
 Observação para tratamento de Html e Requsições http, geralmente uso bibliotecas como DOM - https://www.php.net/manual/pt_BR/book.dom.php e GUZZLEPHP - https://docs.guzzlephp.org/en/stable/#
 Porém como citado acima, fiz como alternativa essas classes manualmente para uma melhor avaliação de como resolver sem usar nenhuma bliblioteca.
 
-4° o repositório vendo que está na raiz do projeto está somente para uso do autoload e psr-4
+4° o repositório vendor que está na raiz do projeto está somente para uso do autoload e psr-4
 
 #############################################################################################################################
 
@@ -75,5 +77,3 @@ Http.php => A classe Http.php busca a resposta enviando o novo token e os cookie
 Crawly.php => A classe Crawly.php pega o html da resposta, passa para a classe Html.php, que retorna o numero de resposta novamente para a classe Crawly.php .
 
 Crawly.php => Por fim a classe Crawly.php imprime o resultado na tela, como solicitado por e-mail.
-
-vendor/bin/phpunit ./tests/CrawlyTest.php

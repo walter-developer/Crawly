@@ -16,7 +16,7 @@ services:
     image: composer
     container_name: php-composer
     environment:
-      - COMPOSER_CACHE_DIR=/app/var/cache/composer
+      - COMPOSER_CACHE_DIR=/etc/cache/composer
     restart: 'no'
     volumes:
       - ./:/app/
